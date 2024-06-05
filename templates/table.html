@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas</title>
+
+    <!-- Bloco de estilo -->
+    <style>
+      html{
+        font-family: sans-serif;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+      h1 {
+        margin: 0 auto;
+      }
+      th{
+        text-transform: capitalize;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Notas</h1>
+    <!-- Realiza um for em notas para renderizar os htmls na tela -->
+    {% for nota in notas %}
+                {{ nota|safe }}
+    {% endfor %}
+  </div>
+</body>
+</html>
